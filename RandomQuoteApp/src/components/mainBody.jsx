@@ -4,7 +4,7 @@ import { changeColor } from '../statesRedux/bgTextSlice';
 import { useState } from 'react';
 
 const Main = () => {
-  const { quote, author, error } = useSelector((state) => state.quote);  
+  const { quote, author, loading, error } = useSelector((state) => state.quote);  
   const { bgColor, color } = useSelector((state) => state.bgText)
   const dispatch = useDispatch();
 
@@ -13,9 +13,11 @@ const Main = () => {
   const fading = () => {
     setIsFading(true)
 
-    setTimeout(() => {
-      setIsFading(false)
-    }, 500)
+    if (!loading) {
+      setTimeout(() => {
+        setIsFading(false)
+      }, 500)
+    }
   }
 
   const bgColorIndeex = ['redBg', 'blueBg', 'orangeBg', 'yellowBg', 'greenBg', 'indigoBg', 'violetBg'];
@@ -31,14 +33,14 @@ const Main = () => {
             </h5>
 
             <p className={`${colorTxtIndex[color]} ${isFading ? 'faded-in' : 'faded-out'} text-end`} id="author">
-              {error ? null : ("- " + author || "Unknown")}
+              {error ? null : ("- " + (author || "Unknown"))}
             </p>
           </div>
 
           <div className="d-flex justify-content-between">
             <a
               className={`${bgColorIndeex[bgColor]} align-self-center py-1 px-2 rounded`}
-              href="https://twitter.com/intent/tweet"
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('"' + quote + '" ' + " -  " + (author || "Unknown"))}`}              
               target="_blank"
               rel="noopener noreferrer"
               id="tweet-quote"
