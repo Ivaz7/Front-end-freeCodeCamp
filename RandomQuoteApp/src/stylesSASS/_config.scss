@@ -1,0 +1,64 @@
+$color-red: #ff6f61;    
+$color-orange: #ffcc5c;  
+$color-yellow: #ffee93;  
+$color-green: #88d8b0;  
+$color-blue: #4a90e2;   
+$color-indigo: #8e8dff;  
+$color-violet: #c397d8;
+
+.redBg {
+  background-color: $color-red;
+}
+
+.blueBg {
+  background-color: $color-blue;
+}
+
+.orangeBg {
+  background-color: $color-orange;
+}
+
+.yellowBg {
+  background-color: $color-yellow;
+}
+
+.greenBg {
+  background-color: $color-green;
+}
+
+.indigoBg {
+  background-color: $color-indigo;
+}
+
+.violetBg {
+  background-color: $color-violet;
+}
+
+.redText {
+  color: $color-red;
+}
+
+.blueText {
+  color: $color-blue;
+}
+
+.orangeText {
+  color: $color-orange;
+}
+
+.yellowText {
+  color: $color-yellow;
+}
+
+.greenText {
+  color: $color-green;
+}
+
+.indigoText {
+  color: $color-indigo;
+}
+
+.violetText {
+  color: $color-violet;
+}
+
