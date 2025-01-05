@@ -1,0 +1,8 @@
+@use './config' as color;
+@use './header';
+
+* {
+  background-color: color.$black;
+  color: color.$white;
+  box-sizing: border-box;
+}

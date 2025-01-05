@@ -1,0 +1,6 @@
+@use './config' as color;
+
+.header {
+  background-color: color.$red-2;
+  color: color.$white
+}
