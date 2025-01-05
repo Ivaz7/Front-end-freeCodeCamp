@@ -1,0 +1,17 @@
+@use './config' as color;
+
+.sectionHead {
+  background-color: color.$red-1;
+  border: 0.1rem solid color.$gray;
+  border-bottom: none;
+
+  i {
+    background-color: color.$red-1;
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    background-color: color.$red-1;
+    margin: 0;
+  }
+}

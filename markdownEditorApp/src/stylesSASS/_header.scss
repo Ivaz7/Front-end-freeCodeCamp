@@ -1,6 +1,7 @@
 @use './config' as color;
 
 .header {
+  height: 12vh;
   background-color: color.$red-2;
   color: color.$white
 }

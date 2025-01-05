@@ -1,0 +1,5 @@
+@use './config' as color;
+
+.sectionBody {
+  border: 0.1rem solid color.$gray;
+}

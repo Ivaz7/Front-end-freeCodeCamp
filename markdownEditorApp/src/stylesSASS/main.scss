@@ -1,8 +1,18 @@
 @use './config' as color;
 @use './header';
+@use './sectionHead';
+@use './sectionBody';
 
 * {
   background-color: color.$black;
   color: color.$white;
   box-sizing: border-box;
+}
+
+main {
+  height: 86vh;
+}
+
+section {
+  box-shadow: 0 0 0.7rem color.$red-1;
 }
