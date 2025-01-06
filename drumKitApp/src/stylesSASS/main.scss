@@ -1,6 +1,9 @@
 @use './config' as clr;
 @use './header';
 @use './containerDrum';
+@use './padTile';
+@use './settingButton';
+@use './volumeBtn';
 
 * {
   background-color: clr.$color-darkest;
@@ -17,6 +20,7 @@ main {
 }
 
 section {
+  height: 19rem;
   background-color: clr.$color-dark;
   width: 15rem;
 

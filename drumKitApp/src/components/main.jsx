@@ -12,7 +12,7 @@ const Main = () => {
         d-flex
         justify-content-center
         align-items-center
-        gap-4
+        gap-2
         p-3
         rounded
       ">

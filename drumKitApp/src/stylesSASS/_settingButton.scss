@@ -1,0 +1,22 @@
+@use './config' as clr;
+
+.settingButton {
+  height: 80%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  button {
+    all: unset;
+    padding: 0.5rem;
+    background-color: clr.$color-primary;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease-in-out 0.15s;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

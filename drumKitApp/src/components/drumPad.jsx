@@ -59,15 +59,17 @@ const DrumPad = (prop) => {
         () => clickMakeSound(drum.type)
       } 
       tabIndex="0"
-    >
-      <div>{drum.name}</div>
-      <div>{drum.key}</div>
+    > 
+      <div className='padbutton'>
+        <div className='padName'>{drum.name}</div>
+        <div className='padKey'>({drum.key})</div>
+      </div>
     </button>
   ))
 
   return (
     <section id="display" className="drum-pad">
-      <h2>Drum Pad</h2>
+      <h2 className='text-center'>Drum Pad</h2>
       <div className="padTile">
         {renderDrumOad}
       </div>

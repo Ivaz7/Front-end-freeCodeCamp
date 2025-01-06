@@ -1,0 +1,34 @@
+@use './config' as clr;
+
+.padTile {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.3rem;
+  padding: 0.3rem;
+
+  button {
+    all: unset;
+    background-color: clr.$color-primary;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease-in-out 0.15s;
+    
+    .padbutton {
+      height: 100%;
+      padding: 0.3rem;
+      background-color: clr.$color-primary;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      justify-content: space-between;
+
+      .padKey {
+        font-size: 0.7rem;
+      }
+    } 
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
