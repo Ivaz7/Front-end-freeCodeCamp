@@ -1,0 +1,14 @@
+@use './config' as clr;
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  background-color: clr.$color-primary;
+
+  h1 {
+    background-color: clr.$color-primary;
+    margin: 0;
+    display: inline;
+  }
+}

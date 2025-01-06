@@ -1,0 +1,5 @@
+@use './config' as clr;
+
+.containerDrum {
+  background-color: clr.$color-secondary;
+}
