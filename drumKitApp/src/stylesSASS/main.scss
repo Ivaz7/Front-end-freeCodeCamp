@@ -17,5 +17,18 @@ main {
 }
 
 section {
+  background-color: clr.$color-dark;
   width: 15rem;
+
+  h2, input, div {
+    background-color: clr.$color-dark;
+  }
+
+  button {
+    background-color: clr.$color-primary;
+
+    div {
+      background-color: clr.$color-primary;      
+    }
+  }
 }
