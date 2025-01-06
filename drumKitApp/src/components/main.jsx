@@ -4,6 +4,7 @@ import DrumSetting from "./drumSetting";
 
 const Main = () => {
   const [volume, setVolume] = useState(0.5)
+  const [isChanging, setIsChanging] = useState(false)
 
   return (
     <main id="drum-machine">
@@ -16,8 +17,8 @@ const Main = () => {
         p-3
         rounded
       ">
-        <DrumPad volume={volume} />
-        <DrumSetting volume={volume} setVolume={setVolume} />
+        <DrumPad volume={volume} isChanging={isChanging} setIsChanging={setIsChanging} />
+        <DrumSetting volume={volume} setVolume={setVolume} isChanging={isChanging} setIsChanging={setIsChanging} />
       </div>
     </main>
   )

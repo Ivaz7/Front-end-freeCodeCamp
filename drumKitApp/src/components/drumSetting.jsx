@@ -20,7 +20,7 @@ const DrumSetting = (prop) => {
           />
         </div>
         <button onClick={() => Howler.stop()} className="silince">Silince</button>
-        <button className="changeDrumPad">Change Sortcut</button>
+        <button onClick={() => prop.setIsChanging(prev => !prev)} className="changeDrumPad">{prop.isChanging ? "Save" : "Change Shortcut"}</button>
       </div>
     </section>
   )
