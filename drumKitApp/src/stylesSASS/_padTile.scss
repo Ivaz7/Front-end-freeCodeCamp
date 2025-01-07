@@ -22,6 +22,10 @@
       gap: 0.3rem;
       justify-content: space-between;
 
+      div {
+        background-color: clr.$color-primary;
+      }
+
       .padKey {
         font-size: 0.7rem;
       }
@@ -29,6 +33,21 @@
 
     &:hover {
       opacity: 0.8;
+    }
+  }
+
+  .disabledClass {
+    @extend button;
+    background-color: clr.$color-darkest;
+    cursor: not-allowed;
+    opacity: 0.8;
+
+    .padbutton {
+      background-color: clr.$color-darkest;
+
+      div {
+        background-color: clr.$color-darkest;
+      }
     }
   }
 }

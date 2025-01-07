@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Howl } from "howler";
 import { useEffect } from 'react';
-import { changeShortCut } from '../stateRedux/drumPadSlice';
+import { changeShortCut, changePicked } from '../stateRedux/drumPadSlice';
 
 const DrumPad = (prop) => {
   const { 
@@ -31,27 +31,25 @@ const DrumPad = (prop) => {
   ];
 
   const clickMakeSound = (type) => {
-    if (!prop.isChanging) {
-      const sound = new Howl({
-        src: [`sound/${type}.mp3`],
-        volume: prop.volume
-      });
-      sound.play();
-    } else {
-      const handleKeyDownChange = (event) => {
-        const drumIndex = drumPad.findIndex(drum => drum.type === type);
-        if (drumIndex !== -1) {
-          dispatch(changeShortCut({ stateInx: drumIndex, newKey: event.key }));
-        }
-      };
-
-      window.addEventListener("keydown", handleKeyDownChange);
-
-      return () => {
-        window.removeEventListener("keydown", handleKeyDownChange);
-      };
-    }
+    const sound = new Howl({
+      src: [`sound/${type}.mp3`],
+      volume: prop.volume
+    });
+    sound.play();
   };
+
+  const clickChangeShortCut = (name) => {
+    dispatch(changePicked({ stateInx: name }));
+  
+    const handleNewKey = (e) => {
+      dispatch(changeShortCut({ stateInx: name, newKey: e.key }));
+      window.removeEventListener("keydown", handleNewKey);
+      dispatch(changePicked({ stateInx: name }));
+    };
+  
+    window.addEventListener("keydown", handleNewKey);
+  };
+  
 
   const handleKeyDown = (e) => {
     drumPad.forEach(drum => {
@@ -75,7 +73,9 @@ const DrumPad = (prop) => {
     <button 
       key={drum.type} 
       id={drum.type}
-      onClick={() => clickMakeSound(drum.type)} 
+      onClick={prop.isChanging ? () => clickChangeShortCut(drum.name) : () => clickMakeSound(drum.type)} 
+      disabled={drum.picked}
+      className={drum.picked ? "disabledClass" : ""}
       tabIndex="0"
     > 
       <div className='padbutton'>
