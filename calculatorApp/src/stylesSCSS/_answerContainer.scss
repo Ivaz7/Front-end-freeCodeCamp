@@ -1,0 +1,11 @@
+@use './config' as clr;
+
+.answerContainer {
+  background-color: clr.$secondary;
+  
+  div {
+    background-color: clr.$secondary;
+    color: clr.$primary;
+    font-weight: bold;
+  }
+}
