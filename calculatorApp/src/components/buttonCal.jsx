@@ -5,7 +5,7 @@ const ButtonCal = () => {
   const stateArr = useSelector((state) => state.buttonCal)
   const dispatch = useDispatch();
 
-  const ChangeOnClick = (val) => {
+  const ChangeOnClick = (val, op) => {
     if (val === "=") {
       return () => dispatch(changeAswer());
     }
@@ -16,15 +16,16 @@ const ButtonCal = () => {
   
     return () => {
       dispatch(changeVal(val));
-      dispatch(addValue(val));
+      dispatch(addValue({ val, op }));
     };
   };
   
   const renderBtn = stateArr.map((state, index) => (
     <button 
-      className={state.name} 
       key={index}
-      onClick={() => ChangeOnClick(state.value)()} 
+      className={state.name} 
+      id={state.name}
+      onClick={() => ChangeOnClick(state.value, state.operator)()} 
     >
       {state.value === "*" ? state.name : state.value}
     </button>

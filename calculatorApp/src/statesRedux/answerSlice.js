@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: 0,
+  value: '',
   answer: 0,
   equation: ''
 }
@@ -11,18 +11,25 @@ export const answerSlice = createSlice({
   initialState,
   reducers: {
     addValue: (state, action) => {
-      state.equation += action.payload;
+      const { val, op } = action.payload;
+
+      if (op === true) {
+        state.value = ''
+      }
+
+      state.equation += val;
     },
     changeAswer: (state) => {
       state.answer = eval(state.equation);
       state.equation = ''
       state.equation += state.answer
+      state.value = ''
     },
     changeVal : (state, action) => {
-      state.value = action.payload;
+      state.value += String(action.payload);
     },
     reset: (state) => {
-      state.value = 0
+      state.value = ''
       state.answer = 0
       state.equation = ''
     }
