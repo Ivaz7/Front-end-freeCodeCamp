@@ -10,6 +10,7 @@ const Main = () => {
         flex-column
         gap-4
         align-items-center
+        p-3
       "  
     >
       <LengthBreakSession />

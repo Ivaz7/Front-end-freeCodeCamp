@@ -1,4 +1,6 @@
 @use './config' as c;
+@use './button';
+@use './timeRender.';
 
 * {
   color: c.$white;
@@ -19,4 +21,10 @@ main {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
+  border: 0.3rem solid;
+  border-bottom-color: c.$redDark;
+  border-right-color: c.$redDark;
+  border-left-color: c.$pink;
+  border-top-color: c.$pink;
 }

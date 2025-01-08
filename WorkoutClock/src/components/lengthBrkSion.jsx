@@ -7,11 +7,12 @@ const LengthBreakSession = () => {
         flex-row
         gap-5
         text-center
+        p-2
       "
     >
       <div 
         className="
-          break
+          lengthDiv
           d-flex
           flex-column
           gap-2
@@ -21,7 +22,7 @@ const LengthBreakSession = () => {
 
         <div
           className="
-            breakBtn
+            lengthBtn
             d-flex
             flex-row
             gap-2
@@ -29,15 +30,19 @@ const LengthBreakSession = () => {
             justify-content-center
           "
         >
-          <i className="fa-solid fa-arrow-up"></i>
+          <button>
+           <i className="fa-solid fa-arrow-up"></i>
+          </button>
           <h5>5 min</h5>
-          <i className="fa-solid fa-arrow-down"></i>
+          <button>
+            <i className="fa-solid fa-arrow-down"></i>
+          </button>
         </div>
       </div>
 
       <div 
         className="
-          session
+          lengthDiv
           d-flex
           flex-column
           gap-2
@@ -47,7 +52,7 @@ const LengthBreakSession = () => {
 
         <div
           className="
-            sessionBtn
+            lengthBtn
             d-flex
             flex-row
             gap-2
@@ -55,9 +60,13 @@ const LengthBreakSession = () => {
             justify-content-center
           "
         >
-          <i className="fa-solid fa-arrow-up"></i>
+          <button>
+           <i className="fa-solid fa-arrow-up"></i>
+          </button>
           <h5>25 min</h5>
-          <i className="fa-solid fa-arrow-down"></i>
+          <button>
+            <i className="fa-solid fa-arrow-down"></i>
+          </button>
         </div>
       </div>
     </section>

@@ -1,0 +1,22 @@
+@use './config' as c;
+
+button {
+  all: unset;
+  text-align: center;
+  margin: 0 0.2rem;
+  height: 2rem;
+  width: 2rem;
+  border: 0.2rem solid;
+  border-bottom-color: c.$greenDark;
+  border-right-color: c.$greenDark;
+  border-left-color: c.$green;
+  border-top-color: c.$green;
+
+  &:active {
+    background-color: c.$blackDark;
+    border-bottom-color: c.$green;
+    border-right-color: c.$green;
+    border-left-color: c.$greenDark;
+    border-top-color: c.$greenDark;  
+  }
+}
