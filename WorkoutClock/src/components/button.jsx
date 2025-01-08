@@ -1,11 +1,11 @@
 const Button = () => {
   return (
     <section>
-      <button>
+      <button id="time-left">
         <i className="fa-solid fa-play"></i>
       </button>
 
-      <button>
+      <button id="start_stop">
         <i className="fa-solid fa-pause"></i>
       </button>
 
@@ -13,7 +13,7 @@ const Button = () => {
         <i className="fa-solid fa-forward"></i>
       </button>
 
-      <button>
+      <button id="reset">
         <i className="fa-solid fa-clock-rotate-left"></i>      
       </button>
     </section>

@@ -18,7 +18,7 @@ const LengthBreakSession = () => {
           gap-2
         "
       >
-        <h4>Break Length</h4>
+        <h4 id="break-label">Break Length</h4>
 
         <div
           className="
@@ -30,11 +30,13 @@ const LengthBreakSession = () => {
             justify-content-center
           "
         >
-          <button>
+          <button id="break-increment">
            <i className="fa-solid fa-arrow-up"></i>
           </button>
-          <h5>5 min</h5>
-          <button>
+
+          <h5 id="break-length">5 min</h5>
+
+          <button id="break-decrement">
             <i className="fa-solid fa-arrow-down"></i>
           </button>
         </div>
@@ -48,7 +50,7 @@ const LengthBreakSession = () => {
           gap-2
         "
       >
-        <h4>Session Length</h4>
+        <h4 id="session-label">Session Length</h4>
 
         <div
           className="
@@ -60,11 +62,13 @@ const LengthBreakSession = () => {
             justify-content-center
           "
         >
-          <button>
+          <button id="session-increment">
            <i className="fa-solid fa-arrow-up"></i>
           </button>
-          <h5>25 min</h5>
-          <button>
+
+          <h5 id="session-length">25 min</h5>
+
+          <button id="session-decrement">
             <i className="fa-solid fa-arrow-down"></i>
           </button>
         </div>
