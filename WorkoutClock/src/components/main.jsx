@@ -1,3 +1,4 @@
+import Button from "./button";
 import LengthBreakSession from "./lengthBrkSion";
 import TimeRender from "./timeRender";
 
@@ -13,6 +14,7 @@ const Main = () => {
     >
       <LengthBreakSession />
       <TimeRender />
+      <Button />
     </main>
   )
 }

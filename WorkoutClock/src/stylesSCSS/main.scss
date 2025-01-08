@@ -1,8 +1,11 @@
 @use './config' as c;
 
 * {
-  background-color: c.$black;
   color: c.$white;
+}
+
+body {
+  background-color: c.$black;
 }
 
 header {
