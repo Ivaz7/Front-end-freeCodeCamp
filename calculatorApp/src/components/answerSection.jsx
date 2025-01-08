@@ -15,7 +15,7 @@ const AnswerSection = () => {
       "
     >
       <div>
-        {equation === '' ? answer : equation}
+        {equation.length === 0 ? answer : equation}
       </div>
 
       <div>

@@ -16,7 +16,7 @@ const initialState = [
   { value: 2, name: "two", operator: false },
   { value: 3, name: "three", operator: false },
   { value: 0, name: "zero", operator: false },
-  { value: ".", name: "decimal", operator: true },
+  { value: ".", name: "decimal", operator: false },
   { value: "=", name: "equal", operator: false }
 ];
 

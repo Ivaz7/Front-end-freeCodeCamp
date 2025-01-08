@@ -15,8 +15,8 @@ const ButtonCal = () => {
     }
   
     return () => {
-      dispatch(changeVal(val));
-      dispatch(addValue({ val, op }));
+      dispatch(addValue({ val }));
+      dispatch(changeVal({ val, op }));
     };
   };
   
