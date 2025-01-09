@@ -9,4 +9,9 @@
   width: 10.5rem;
   border-radius: 10rem;
   border: 0.2rem solid c.$green;
+
+  h1, h4 {
+    background-color: c.$greenDark;
+    border-radius: 5rem;
+  }
 }

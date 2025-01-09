@@ -8,14 +8,14 @@ const Button = () => {
   const dispatch = useDispatch();
   let intervalId = useRef(0);
 
+  const clearCurrentInterval = () => {
+    if (intervalId.current) {
+      clearInterval(intervalId.current);
+      intervalId.current = 0;
+    }
+  };
+
   useEffect(() => {
-    const clearCurrentInterval = () => {
-      if (intervalId.current) {
-        clearInterval(intervalId.current);
-        intervalId.current = 0;
-      }
-    };
-  
     if (isRunning) {
       if (sessionTime === 0 && sessionOnOrBreak) {
         clearCurrentInterval();
@@ -42,6 +42,25 @@ const Button = () => {
     };
   }, [dispatch, isRunning, sessionOnOrBreak, sessionTime, breakTime, sessionLgth, breakLgth]);
   
+  const forwardSkip = () => {
+    clearCurrentInterval();
+  
+    if (sessionOnOrBreak) {
+      dispatch(changeStatus());
+      dispatch(setBreakTime(breakLgth));
+    } else {
+      dispatch(changeStatus());
+      dispatch(setSessionTime(sessionLgth));
+    }
+  
+    intervalId.current = setInterval(() => {
+      if (sessionOnOrBreak) {
+        dispatch(startSessionTime());
+      } else {
+        dispatch(startBreakTime());
+      }
+    }, 1000);
+  };
   
 
   const runningOn = () => {
@@ -66,7 +85,7 @@ const Button = () => {
         <i className="fa-solid fa-pause"></i>
       </button>
 
-      <button>
+      <button onClick={forwardSkip}>
         <i className="fa-solid fa-forward"></i>
       </button>
 
