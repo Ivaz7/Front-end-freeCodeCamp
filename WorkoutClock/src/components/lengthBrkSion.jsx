@@ -5,6 +5,7 @@ import { setSessionTime, setBreakTime } from '../statesRedux/timeCountSlice';
 
 const LengthBreakSession = (prop) => {
   const { sessionLgth, breakLgth } = useSelector((state) => state.length);
+  const { isRunning } = useSelector((state) => state.timeCount);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -44,13 +45,13 @@ const LengthBreakSession = (prop) => {
             justify-content-between
           "
         >
-          <button onClick={() => dispatch(decrementBreak())} id="break-decrement">
+          <button disabled={isRunning} onClick={isRunning ? null : () => dispatch(decrementBreak())} id="break-decrement">
             <i className="fa-solid fa-arrow-down"></i>
           </button>
 
           <h5 id="break-length">{breakLgth} min</h5>
 
-          <button onClick={() => dispatch(incremenetBreak())} id="break-increment">
+          <button disabled={isRunning} onClick={isRunning ? null : () => dispatch(incremenetBreak())} id="break-increment">
            <i className="fa-solid fa-arrow-up"></i>
           </button>
         </div>
@@ -76,13 +77,13 @@ const LengthBreakSession = (prop) => {
             justify-content-between
           "
         >
-          <button onClick={() => dispatch(decrementSession())} id="session-decrement">
+          <button disabled={isRunning} onClick={isRunning ? null : () => dispatch(decrementSession())} id="session-decrement">
             <i className="fa-solid fa-arrow-down"></i>
           </button>
 
           <h5 id="session-length">{sessionLgth} min</h5>
 
-          <button onClick={() => dispatch(incremenetSession())} id="session-increment">
+          <button disabled={isRunning} onClick={isRunning ? null : () => dispatch(incremenetSession())} id="session-increment">
            <i className="fa-solid fa-arrow-up"></i>
           </button>
         </div>

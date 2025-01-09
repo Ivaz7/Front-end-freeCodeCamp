@@ -2,6 +2,7 @@
 
 button {
   all: unset;
+  opacity: 1;
   text-align: center;
   margin: 0 0.2rem;
   height: 2rem;
@@ -11,6 +12,7 @@ button {
   border-right-color: c.$greenDark;
   border-left-color: c.$green;
   border-top-color: c.$green;
+  cursor: not-allowed;
 
   &:active {
     background-color: c.$blackDark;
@@ -18,5 +20,15 @@ button {
     border-right-color: c.$green;
     border-left-color: c.$greenDark;
     border-top-color: c.$greenDark;  
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background-color: c.$blackDark;
+    border-bottom-color: c.$green;
+    border-right-color: c.$green;
+    border-left-color: c.$greenDark;
+    border-top-color: c.$greenDark; 
   }
 }

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { startSessionTime, setBreakTime, setSessionTime, startBreakTime, startRunning, pauseRunning, changeStatus } from "../statesRedux/timeCountSlice";
+import { startSessionTime, setBreakTime, setSessionTime, startBreakTime, startRunning, pauseRunning, changeStatus, reset } from "../statesRedux/timeCountSlice";
 import { useEffect, useRef } from "react";
 
 const Button = () => {
@@ -52,6 +52,10 @@ const Button = () => {
     dispatch(pauseRunning());
   }
 
+  const resetAll = () => {
+    dispatch(reset());
+  }
+
   return (
     <section>
       <button onClick={runningOn} id="time-left">
@@ -66,7 +70,7 @@ const Button = () => {
         <i className="fa-solid fa-forward"></i>
       </button>
 
-      <button id="reset">
+      <button onClick={resetAll} id="reset">
         <i className="fa-solid fa-clock-rotate-left"></i>      
       </button>
     </section>

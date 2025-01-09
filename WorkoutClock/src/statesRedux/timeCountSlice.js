@@ -12,9 +12,11 @@ export const timeCountSlice = createSlice({
   initialState,
   reducers: {
     setSessionTime: (state, action) => {
+      if (!state.sessionOnOrBreak) return;
       state.sessionTime = (action.payload * 60 * 1000);
     },
     setBreakTime: (state, action) => {
+      if (state.sessionOnOrBreak) return;
       state.breakTime = (action.payload * 60 * 1000);
     },
     startSessionTime: (state) => {
@@ -31,10 +33,16 @@ export const timeCountSlice = createSlice({
     },
     changeStatus: (state) => {
       state.sessionOnOrBreak = !state.sessionOnOrBreak;
+    },
+    reset: (state) => {
+      state.isRunning = false;
+      state.sessionOnOrBreak = true;
+      state.sessionTime = 25 * 60 * 1000;
+      state.breakTime = 5 * 60 * 1000;
     }
   }
 })
 
-export const { setSessionTime, setBreakTime, startSessionTime, startBreakTime, startRunning, pauseRunning, changeStatus } = timeCountSlice.actions;
+export const { setSessionTime, setBreakTime, startSessionTime, startBreakTime, startRunning, pauseRunning, changeStatus, reset } = timeCountSlice.actions;
 
 export default timeCountSlice.reducer;
