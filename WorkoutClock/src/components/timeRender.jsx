@@ -27,6 +27,8 @@ const TimeRender = () => {
       <h4 id="beep">{sessionOnOrBreak ? "Session Time" : "Break Time"}</h4>
       <h1 id="timer-label">{sessionOnOrBreak ? formatTime(sessionTime) : formatTime(breakTime)}</h1>
     </section>
+
+    // testing
   )
 }
 
