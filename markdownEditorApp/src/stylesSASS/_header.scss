@@ -5,3 +5,9 @@
   background-color: color.$red-2;
   color: color.$white
 }
+
+@media (max-width:500px) {
+  .header {
+    font-size: 1.3rem;
+  }
+}

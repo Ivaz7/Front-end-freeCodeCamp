@@ -16,3 +16,15 @@ main {
 section {
   box-shadow: 0 0 0.7rem color.$red-1;
 }
+
+.editor {
+  width: 60%;
+}
+
+.previewer {
+  width: 70%;
+
+  .sectionBody {
+    height: 30vh;
+  }
+}

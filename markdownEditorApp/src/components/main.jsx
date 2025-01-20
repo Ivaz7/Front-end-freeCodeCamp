@@ -12,8 +12,10 @@ const Main = () => {
       flex-column
       justify-content-start
       align-items-center
-      pt-4
-      gap-3
+      pt-2
+      gap-1
+      pt-sm-4
+      gap-sm-3
     '>
       <section className='editor'>
         <div className='
@@ -21,7 +23,8 @@ const Main = () => {
           d-flex
           flex-row
           gap-1
-          p-2
+          p-1
+          p-sm-2
           align-items-center
         '>
           <i className="fa-solid fa-keyboard"></i>
@@ -33,8 +36,6 @@ const Main = () => {
           onChange={(e) => dispatch(changeInput(e.target.value))}
           name="input"
           id="editor"
-          rows="5"
-          cols="50"
         ></textarea>
       </section>
       <section className='previewer'>
@@ -43,7 +44,8 @@ const Main = () => {
           d-flex
           flex-row
           gap-1
-          p-2
+          p-1
+          p-sm-2
           align-items-center
         '>
           <i className="fa-solid fa-eye"></i>
@@ -52,9 +54,6 @@ const Main = () => {
         <div
           className='sectionBody p-2'
           id="preview"
-          style={{
-            width: "30rem"
-          }}
           dangerouslySetInnerHTML={{ __html: preview }}
         ></div>
       </section>

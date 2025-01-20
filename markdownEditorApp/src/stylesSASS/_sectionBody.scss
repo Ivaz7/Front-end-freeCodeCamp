@@ -2,4 +2,9 @@
 
 .sectionBody {
   border: 0.1rem solid color.$gray;
+  height: 25vh;
+}
+
+textarea {
+  width: 100%;
 }
