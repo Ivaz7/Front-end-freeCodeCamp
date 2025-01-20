@@ -6,6 +6,37 @@
 
     .lengthBtn {
       width: 10rem;
+
+      h5 {
+        margin: 0;
+      }
+
+      button {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width:500px) {
+  .lengthBrkSion {
+    font-size: 0.7rem;
+    width: 13rem;
+
+    h4 {
+      font-size: 0.7rem;
+    }
+    
+    .lengthDiv {
+      width: 5rem;
+      
+      .lengthBtn {
+        h5 {
+          font-size: 0.6rem;
+        }
+        
+        width: 5rem;
+      }
     }
   }
 }

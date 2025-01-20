@@ -8,9 +8,11 @@ const Main = () => {
       className="
         d-flex
         flex-column
-        gap-4
+        gap-2
+        gap-sm-4
         align-items-center
-        p-3
+        p-2
+        p-sm-3
       "  
     >
       <LengthBreakSession />

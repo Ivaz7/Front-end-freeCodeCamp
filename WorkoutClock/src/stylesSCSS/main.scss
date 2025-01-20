@@ -2,6 +2,7 @@
 @use './button';
 @use './timeRender.';
 @use './lengthBrkSion';
+@use './header';
 
 * {
   color: c.$white;
@@ -10,12 +11,6 @@
 
 body {
   background-color: c.$black;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-  height: 12vh;
 }
 
 main {
@@ -30,4 +25,15 @@ main {
   border-right-color: c.$redDark;
   border-left-color: c.$pink;
   border-top-color: c.$pink;
+}
+
+@media (max-width: 500px) {
+  main {
+    width: 15rem;
+    border: 0.2rem solid;
+    border-bottom-color: c.$redDark;
+    border-right-color: c.$redDark;
+    border-left-color: c.$pink;
+    border-top-color: c.$pink;
+  }
 }

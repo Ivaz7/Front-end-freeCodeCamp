@@ -32,3 +32,36 @@ button {
     border-top-color: c.$greenDark; 
   }
 }
+
+@media (max-width:500px) {
+  button {
+    font-size: 0.6rem;
+    height: 1rem;
+    width: 1rem;
+    border: 0.1rem solid;
+
+    border-bottom-color: c.$greenDark;
+    border-right-color: c.$greenDark;
+    border-left-color: c.$green;
+    border-top-color: c.$green;
+    cursor: not-allowed;
+  
+    &:active {
+      background-color: c.$blackDark;
+      border-bottom-color: c.$green;
+      border-right-color: c.$green;
+      border-left-color: c.$greenDark;
+      border-top-color: c.$greenDark;  
+    }
+  
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+      background-color: c.$blackDark;
+      border-bottom-color: c.$green;
+      border-right-color: c.$green;
+      border-left-color: c.$greenDark;
+      border-top-color: c.$greenDark; 
+    }
+  }
+}

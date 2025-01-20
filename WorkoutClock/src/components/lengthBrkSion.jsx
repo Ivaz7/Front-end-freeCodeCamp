@@ -20,9 +20,11 @@ const LengthBreakSession = (prop) => {
         d-flex
         flex-row
         justify-content-between
-        gap-5
+        gap-2
+        gap-sm-5
         text-center
-        p-2
+        p-1
+        p-sm-2
       "
     >
       <div 
@@ -31,7 +33,8 @@ const LengthBreakSession = (prop) => {
           d-flex
           flex-column
           align-items-center
-          gap-2
+          gap-1
+          gap-sm-2
         "
       >
         <h4 id="break-label">Break Length</h4>
@@ -40,6 +43,7 @@ const LengthBreakSession = (prop) => {
           className="
             lengthBtn
             d-flex
+            gap-1
             flex-row
             align-items-center
             justify-content-between
@@ -63,7 +67,8 @@ const LengthBreakSession = (prop) => {
           d-flex
           flex-column
           align-items-center
-          gap-2
+          gap-1
+          gap-sm-2
         "
       >
         <h4 id="session-label">Session Length</h4>
@@ -72,6 +77,7 @@ const LengthBreakSession = (prop) => {
           className="
             lengthBtn
             d-flex
+            gap-1
             flex-row
             align-items-center
             justify-content-between
