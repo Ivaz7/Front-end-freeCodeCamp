@@ -11,10 +11,16 @@ const Main = () => {
       <div className="
         containerDrum
         d-flex
+        flex-sm-row
+        flex-column
         justify-content-center
         align-items-center
-        gap-2
-        p-3
+        gap-sm-2
+        p-sm-3
+        gap-1
+        p-1
+        mt-sm-0
+        mt-2
         rounded
       ">
         <DrumPad volume={volume} isChanging={isChanging} setIsChanging={setIsChanging} />

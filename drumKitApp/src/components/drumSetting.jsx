@@ -2,15 +2,23 @@ import { Howler } from "howler";
 
 const DrumSetting = (prop) => {
   return (
-    <section id="display" className="drum-setting">
+    <section id="display" className="
+      drum-setting
+      d-flex
+      flex-column
+      justify-content-between
+    ">
       <h2 className="text-center">Drum Setting</h2>
       <div className="settingButton">
         <div className="
           volumeButton
           d-flex
           flex-column
-          gap-2
+          gap-sm-3
+          gap-1
           align-items-center
+          mb-sm-0
+          mb-2
         ">
           <div>Volume</div>
           <input 

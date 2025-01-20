@@ -4,6 +4,7 @@
 @use './padTile';
 @use './settingButton';
 @use './volumeBtn';
+@use './drum-setting';
 
 * {
   background-color: clr.$color-darkest;
@@ -16,13 +17,14 @@ main {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 30rem;
+  width: 35rem;
+  height: 60vh;
 }
 
 section {
-  height: 19rem;
+  height: 100%;
   background-color: clr.$color-dark;
-  width: 15rem;
+  width: 100%;
 
   h2, input, div {
     background-color: clr.$color-dark;
@@ -33,6 +35,21 @@ section {
 
     div {
       background-color: clr.$color-primary;      
+    }
+  }
+}
+
+@media (max-width:576px) {
+  main {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  section {
+    font-size: 0.7rem;
+
+    h2 {
+      font-size: 1rem;
     }
   }
 }

@@ -2,7 +2,8 @@
 
 .padTile {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 5rem 5rem 5rem;
+  grid-template-rows: 5rem 5rem 5rem;
   gap: 0.3rem;
   padding: 0.3rem;
 
@@ -47,6 +48,41 @@
 
       div {
         background-color: clr.$color-darkest;
+      }
+    }
+  }
+}
+
+@media (max-width:576px) {
+  .padTile {
+    grid-template-columns: 4rem 4rem 4rem;
+    grid-template-rows: 4rem 4rem 4rem;  
+    padding: 0.2rem;
+    gap: 0.2rem;
+
+    button {
+      .padbutton {
+        padding: 0.2rem;
+
+        .padKey {
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:400px) {
+  .padTile {
+    grid-template-columns: 2.5rem 2.5rem 2.5rem;
+    grid-template-rows: 2.5rem 2.5rem 2.5rem;  
+    font-size: 0.4rem;
+
+    button {
+      .padbutton {
+        .padKey {
+          font-size: 0.4rem;
+        }
       }
     }
   }

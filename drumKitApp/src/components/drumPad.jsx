@@ -86,7 +86,12 @@ const DrumPad = (prop) => {
   ));
 
   return (
-    <section id="display" className="drum-pad">
+    <section id="display" className="
+      drum-pad
+      d-flex
+      flex-column
+      align-items-center
+    ">
       <h2 className='text-center'>Drum Pad</h2>
       <div className="padTile">
         {renderDrumOad}
