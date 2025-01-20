@@ -12,12 +12,33 @@ export const answerSlice = createSlice({
   initialState,
   reducers: {
     addValue: (state, action) => {
-      const { val } = action.payload;
+      const { val, op } = action.payload;
 
-      if (val === '.' && state.value.includes('.')) {
+      const newVal = String(val);
+      
+      if (op === true) {
+        const valLast = state.equation[state.equation.length - 1];
+
+        if (valLast === "+" || valLast === "-" || valLast === "/" || valLast === "*") {
+          return;
+        }
+
+        state.equation.push(newVal);
+        state.value = ''
         return;
       }
 
+      if (newVal === ".") {
+        if (state.value === "") {
+          return;
+        }
+
+        if (state.value.split('').includes(".")) {
+          return
+        }
+      }
+      
+      state.value += newVal;
       state.equation.push(val);
     },
     changeAswer: (state) => {
@@ -25,22 +46,6 @@ export const answerSlice = createSlice({
       state.equation = [];
       state.equation.push(state.answer);
       state.value = '';
-    },
-    changeVal: (state, action) => {
-      const { val, op } = action.payload;
-
-      const newVal = String(val);
-
-      if (op === true) {
-        state.value = ''
-        return
-      }
-
-      if (newVal === '.' && state.value.includes('.')) {
-        return; 
-      }
-
-      state.value += newVal;
     },
     reset: (state) => {
       state.value = '';
@@ -50,6 +55,6 @@ export const answerSlice = createSlice({
   }
 });
 
-export const { addValue, changeAswer, changeVal, reset } = answerSlice.actions;
+export const { addValue, changeAswer, reset } = answerSlice.actions;
 
 export default answerSlice.reducer;

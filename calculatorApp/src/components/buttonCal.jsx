@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { changeVal, changeAswer, addValue, reset } from '../statesRedux/answerSlice';
+import { changeAswer, addValue, reset } from '../statesRedux/answerSlice';
 
 const ButtonCal = () => {
   const stateArr = useSelector((state) => state.buttonCal)
@@ -15,8 +15,7 @@ const ButtonCal = () => {
     }
   
     return () => {
-      dispatch(addValue({ val }));
-      dispatch(changeVal({ val, op }));
+      dispatch(addValue({ val, op }));
     };
   };
   
