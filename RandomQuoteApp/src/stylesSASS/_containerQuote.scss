@@ -1,5 +1,5 @@
 .container-quote {
-  max-width: 25rem;
+  width: 25rem;
   margin: 0 15rem;
   padding: 2.5rem;
   transition: all ease-in-out 0.5s;
@@ -12,5 +12,20 @@
   .faded-out {
     transition: all ease-in-out 0.3s;
     opacity: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .container-quote {
+    width: 12rem;
+    padding: 1rem;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.7rem;
   }
 }
