@@ -8,8 +8,10 @@ const Main = () => {
         d-flex
         flex-column
         align-items-end
-        p-2
-        gap-3
+        p-sm-2
+        gap-sm-3
+        p-1
+        gap-1
       "
     >
       <AnswerSection />

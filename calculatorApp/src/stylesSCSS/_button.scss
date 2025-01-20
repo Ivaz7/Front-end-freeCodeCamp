@@ -3,6 +3,7 @@
 button {
   background-color: clr.$secondary;
   color: clr.$primary;
+  font-size: 1rem;
   font-weight: bold;
   border-top: 0.4rem solid clr.$third;
   border-left: 0.4rem solid clr.$third;
@@ -15,4 +16,21 @@ button {
     border-top: 0.4rem solid clr.$thirdSecondary;
     border-left: 0.4rem solid clr.$thirdSecondary;
   }
+}
+
+@media (max-width:500px) {
+  button {
+    font-size: 0.7rem;
+    border-top: 0.2rem solid clr.$third;
+    border-left: 0.2rem solid clr.$third;
+    border-right: 0.2rem solid clr.$thirdSecondary;
+    border-bottom: 0.2rem solid clr.$thirdSecondary;
+    
+      &:active{
+        border-bottom: 0.2rem solid clr.$third;
+        border-right: 0.2rem solid clr.$third;
+        border-top: 0.2rem solid clr.$thirdSecondary;
+        border-left: 0.2rem solid clr.$thirdSecondary;
+      }
+  } 
 }

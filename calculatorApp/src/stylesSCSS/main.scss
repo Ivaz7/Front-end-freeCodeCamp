@@ -2,17 +2,12 @@
 @use './grid-tile';
 @use './button';
 @use './answerContainer';
+@use './header';
 
 * {
   box-sizing: border-box;
   background-color: clr.$primary;
   color: clr.$white;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-  height: 10vh;
 }
 
 main {
@@ -26,4 +21,13 @@ main {
   border-left: 0.4rem solid clr.$third;
   border-right: 0.4rem solid clr.$thirdSecondary;
   border-bottom: 0.4rem solid clr.$thirdSecondary;
+}
+
+@media (max-width:500px) {
+  main {
+    border-top: 0.2rem solid clr.$third;
+    border-left: 0.2rem solid clr.$third;
+    border-right: 0.2rem solid clr.$thirdSecondary;
+    border-bottom: 0.2rem solid clr.$thirdSecondary;
+  }
 }

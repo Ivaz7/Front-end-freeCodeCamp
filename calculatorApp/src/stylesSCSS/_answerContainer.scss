@@ -2,11 +2,18 @@
 
 .answerContainer {
   background-color: clr.$secondary;
+  font-size: 1rem;
   
   div {
     height: 1rem;
     background-color: clr.$secondary;
     color: clr.$primary;
     font-weight: bold;
+  }
+}
+
+@media (max-width:500px) {
+  .answerContainer {
+    font-size: 0.7rem;
   }
 }

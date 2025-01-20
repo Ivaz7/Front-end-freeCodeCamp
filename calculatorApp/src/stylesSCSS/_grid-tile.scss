@@ -19,3 +19,10 @@
     grid-area: span 4 / 4;
   }
 }
+
+@media (max-width:500px) {
+  .grid-tile {
+    grid-template-columns: repeat(4, 2rem);
+    grid-template-rows: repeat(5, 2rem);
+  }
+}

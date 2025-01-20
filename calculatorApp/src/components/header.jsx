@@ -4,7 +4,7 @@ const Header = () => {
       className="
         d-flex
         justify-content-center
-        align-items-end
+        align-items-center
       "
     >
       <h1>Calculator App</h1>
