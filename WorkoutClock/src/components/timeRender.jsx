@@ -14,6 +14,16 @@ const TimeRender = () => {
     return (num < 10 ? "0" : "") + num; 
   }
 
+  const redTime = () => {
+    if (sessionTime) {
+      return sessionTime < 60000 ? "red" : "";
+    }
+
+    if (breakTime) {
+      return breakTime < 60000 ? "red" : "";
+    }
+  }
+
   return (
     <section
       className="
@@ -25,8 +35,8 @@ const TimeRender = () => {
         gap-sm-2
       "
     >
-      <h4 id="beep">{sessionOnOrBreak ? "Session Time" : "Break Time"}</h4>
-      <h1 id="timer-label">{sessionOnOrBreak ? formatTime(sessionTime) : formatTime(breakTime)}</h1>
+      <h4 className={redTime()} id="beep">{sessionOnOrBreak ? "Session Time" : "Break Time"}</h4>
+      <h1 className={redTime()} id="timer-label">{sessionOnOrBreak ? formatTime(sessionTime) : formatTime(breakTime)}</h1>
     </section>
   )
 }
