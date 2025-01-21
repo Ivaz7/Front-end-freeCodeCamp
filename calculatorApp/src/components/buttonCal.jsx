@@ -26,7 +26,7 @@ const ButtonCal = () => {
       id={state.name}
       onClick={() => ChangeOnClick(state.value, state.operator)()} 
     >
-      {state.value === "*" ? state.name : state.value}
+      {state.value === "*" ? state.display : state.value}
     </button>
   ));
   

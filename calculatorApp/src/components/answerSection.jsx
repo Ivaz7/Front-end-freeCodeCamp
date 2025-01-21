@@ -16,7 +16,7 @@ const AnswerSection = () => {
         pe-1
       "
     >
-      <div>
+      <div id="display">
         {equation.length === 0 ? answer : equation}
       </div>
 
