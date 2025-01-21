@@ -16,9 +16,9 @@
   }
 }
 
-@media (max-width:500px) {
+@media (max-width:300px) {
   .grid-tile {
-    grid-template-columns: repeat(4, 2rem);
-    grid-template-rows: repeat(5, 2rem);
+    grid-template-columns: repeat(4, 3rem);
+    grid-template-rows: repeat(5, 3rem);
   }
 }

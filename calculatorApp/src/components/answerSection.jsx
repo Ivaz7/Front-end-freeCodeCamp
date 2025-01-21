@@ -9,11 +9,9 @@ const AnswerSection = () => {
         answerContainer
         d-flex
         flex-column
-        gap-sm-2
+        gap-2
         align-items-end
-        pe-sm-3
-        gap-1
-        pe-1
+        pe-3
       "
     >
       <div id="display">

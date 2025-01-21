@@ -9,9 +9,8 @@ const Main = () => {
         flex-column
         align-items-end
         p-sm-2
-        gap-sm-3
         p-1
-        gap-1
+        gap-3
       "
     >
       <AnswerSection />
