@@ -35,6 +35,14 @@ button {
 
 @media (max-width:500px) {
   button {
+    font-size: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
+@media (max-width:300px) {
+  button {
     font-size: 0.6rem;
     height: 1rem;
     width: 1rem;

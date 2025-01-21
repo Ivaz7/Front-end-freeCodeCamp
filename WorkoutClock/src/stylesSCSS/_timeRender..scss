@@ -18,6 +18,21 @@
 
 @media (max-width:500px) {
   .timeRender {
+    height: 9rem;
+    width: 9rem;
+
+    h4 {
+      font-size: 1.3rem;
+    }
+
+    h1 {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media (max-width:300px) {
+  .timeRender {
     height: 7rem;
     width: 7rem;
 

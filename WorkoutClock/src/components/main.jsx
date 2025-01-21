@@ -8,7 +8,7 @@ const Main = () => {
       className="
         d-flex
         flex-column
-        gap-2
+        gap-3
         gap-sm-4
         align-items-center
         p-2
