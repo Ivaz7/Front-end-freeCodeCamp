@@ -24,7 +24,7 @@ const Main = () => {
   const colorTxtIndex = ['redText', 'blueText', 'orangeText', 'yellowText', 'greenText', 'indigoText', 'violetText'];
 
   return (
-    <>
+    <body className={`${bgColorIndeex[bgColor]}`}>
       <main className={`${bgColorIndeex[bgColor]} d-flex flex-column justify-content-center align-items-center text-center`} id="quote-box">
         <div className="container-quote d-flex flex-column gap-2 bg-light rounded">
           <div>
@@ -58,7 +58,7 @@ const Main = () => {
           </div>
         </div>
       </main>
-    </>
+    </body>
   );
 }
 
