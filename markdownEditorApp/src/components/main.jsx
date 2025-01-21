@@ -38,6 +38,7 @@ const Main = () => {
           id="editor"
         ></textarea>
       </section>
+      
       <section className='previewer'>
         <div className='
           sectionHead
