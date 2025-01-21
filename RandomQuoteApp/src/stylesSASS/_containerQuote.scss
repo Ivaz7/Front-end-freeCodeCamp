@@ -16,6 +16,21 @@
 
 @media (max-width: 400px) {
   .container-quote {
+    width: 80vw;
+    padding: 1rem;
+  }
+
+  h5 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .container-quote {
     width: 12rem;
     padding: 1rem;
   }
