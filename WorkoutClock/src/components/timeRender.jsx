@@ -24,6 +24,19 @@ const TimeRender = () => {
     }
   }
 
+  const clickMakeSound = () => {
+    const sound = new Audio('notification.mp3')
+    sound.play();
+  };
+
+  if (sessionOnOrBreak && sessionTime === 1000) {
+    clickMakeSound();
+  }
+
+  if (!sessionOnOrBreak && breakTime === 1000) {
+    clickMakeSound();
+  }
+
   return (
     <section
       className="
