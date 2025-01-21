@@ -28,8 +28,6 @@ export const answerSlice = createSlice({
         state.value.pop();
         return;
       }
-
-      // i feel like the last test of freecodecamp doesn't apply how calculator works
       
       if (op === true) {
         const valLast = state.equation[state.equation.length - 1];
